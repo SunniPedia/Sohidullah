@@ -34,7 +34,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     // SlidingRootNav – JitPack থেকে
-    implementation 'com.github.yarolegovich:SlidingRootNav:1.1.1'
+    implementation 'com.github.yarolegovich:SlidingRootNav:1.1.0'
 
     // AndroidX ও অন্যান্য লাইব্রেরি – latest stable versions
     implementation 'androidx.appcompat:appcompat:1.7.1'
@@ -42,3 +42,4 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.11.0'
     implementation 'com.squareup.okhttp3:okhttp:5.1.0'
 }
+
