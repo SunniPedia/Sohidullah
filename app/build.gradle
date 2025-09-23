@@ -22,15 +22,23 @@ android {
     }
 }
 
+repositories {
+    google()
+    mavenCentral()
+    jcenter() // Optional: keep if needed for legacy dependencies
+    maven { url 'https://jitpack.io' } // SlidingRootNav resolve করার জন্য
+}
+
 dependencies {
+    // Local jar files
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    // SlidingRootNav – সর্বোচ্চ স্থিতিশীল পাওয়া গেছে যে ভার্সন, সেটা দেয়া হয়েছে
-    implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
+    // SlidingRootNav – JitPack থেকে
+    implementation 'com.github.yarolegovich:SlidingRootNav:1.1.1'
 
-    // AndroidX ও অন্যান্য লাইব্রেরি-আপডেট
+    // AndroidX ও অন্যান্য লাইব্রেরি – latest stable versions
     implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'com.google.android.material:material:1.13.0'
     implementation 'com.google.code.gson:gson:2.11.0'
-    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.1.0'
 }
